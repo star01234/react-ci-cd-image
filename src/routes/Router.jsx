@@ -8,7 +8,7 @@ const router = createBrowserRouter([
   element: <MainLayout />,
   children: [
    {
-    path: "/react-ci-cd",
+    path: "/react-ci-cd-image",
     element: <Home />
    },
   ],
