@@ -8,6 +8,10 @@ on:
 jobs:
   release-docker-image-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,7 +28,7 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: react-ci-cd-image # ไม่ต้องใส่ naruapon ซ้ำ
+          image: react-ci-cd-img1
           registry: ghcr.io/star01234
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
