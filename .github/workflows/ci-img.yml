@@ -28,7 +28,7 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: react-ci-cd-img1
+          image: react-ci-cd-image
           registry: ghcr.io/star01234
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
